@@ -56,7 +56,7 @@ const fullView = ref(false);
                 <div class="p-2 px-4 text-xl rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
                     :class="{ 'bg-orange-400': fullView, 'bg-orange-300': !fullView }" title="View full"
                     @click="fullView = !fullView">
-                    &#8616;
+                    {{ fullView ? '&#8613;' : '&#8615;' }}
                 </div>
             </div>
 
