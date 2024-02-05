@@ -1,9 +1,9 @@
-suna hai
-========
+📘 Suna Hai
+============
 
 A random couplet from Ahmad Faraz's 'Suna Hai'.
 
-### Try it out: [suna hai](https://suna-hai.afaan.dev)
+### Try it out: [Suna Hai](https://suna-hai.afaan.dev)
 
 ### **Author**: [Afaan Bilal](https://afaan.dev)
 
@@ -11,7 +11,7 @@ A random couplet from Ahmad Faraz's 'Suna Hai'.
 
 ## Screenshots
 
-![suna hai](public/screenshots/suna-hai.png)
+![Suna Hai](public/screenshots/suna-hai.png)
 
 ---
 
@@ -24,5 +24,5 @@ Thanks!
 ---
 
 ## License
-**suna hai** is released under the MIT License.
+**Suna Hai** is released under the MIT License.
 Check out the full license [here](LICENSE).
