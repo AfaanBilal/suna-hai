@@ -50,11 +50,11 @@ const fullView = ref(false);
                 <div class="flex items-center gap-2 pb-2 mb-4 border-b border-orange-400">
                     <div class="flex-1 text-4xl italic">sunā hai</div>
                     <div v-if="!fullView"
-                        class="p-2 px-4 text-xl bg-orange-300 rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
+                        class="p-2 px-4 text-xl font-bold bg-orange-300 rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
                         title="Random" @click="index = Math.floor(Math.random() * (sunaHai.length))">
                         &#10227;
                     </div>
-                    <div class="p-2 px-4 text-xl rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
+                    <div class="p-2 px-4 text-xl font-bold rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
                         :class="{ 'bg-orange-400': fullView, 'bg-orange-300': !fullView }" title="View full"
                         @click="fullView = !fullView">
                         {{ fullView ? '&#8613;' : '&#8615;' }}
