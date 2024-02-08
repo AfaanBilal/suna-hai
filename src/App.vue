@@ -45,36 +45,48 @@ const fullView = ref(false);
 
 <template>
     <div class="flex flex-col items-center justify-center min-h-full p-2 bg-beige">
-        <div class="flex flex-col gap-2">
-            <div class="flex items-center gap-2 pb-2 mb-4 border-b border-orange-400">
-                <div class="flex-1 text-4xl italic">sunā hai</div>
-                <div v-if="!fullView"
-                    class="p-2 px-4 text-xl bg-orange-300 rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
-                    title="Random" @click="index = Math.floor(Math.random() * (sunaHai.length))">
-                    &#10227;
+        <div class="flex items-center justify-center flex-1">
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2 pb-2 mb-4 border-b border-orange-400">
+                    <div class="flex-1 text-4xl italic">sunā hai</div>
+                    <div v-if="!fullView"
+                        class="p-2 px-4 text-xl bg-orange-300 rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
+                        title="Random" @click="index = Math.floor(Math.random() * (sunaHai.length))">
+                        &#10227;
+                    </div>
+                    <div class="p-2 px-4 text-xl rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
+                        :class="{ 'bg-orange-400': fullView, 'bg-orange-300': !fullView }" title="View full"
+                        @click="fullView = !fullView">
+                        {{ fullView ? '&#8613;' : '&#8615;' }}
+                    </div>
                 </div>
-                <div class="p-2 px-4 text-xl rounded cursor-pointer select-none hover:bg-orange-400 active:bg-orange-500"
-                    :class="{ 'bg-orange-400': fullView, 'bg-orange-300': !fullView }" title="View full"
-                    @click="fullView = !fullView">
-                    {{ fullView ? '&#8613;' : '&#8615;' }}
+
+                <div v-if="fullView" class="flex flex-col gap-2">
+                    <div v-for="v in sunaHai" class="italic min-w-80">
+                        <div>{{ v[0] }}</div>
+                        <div>{{ v[1] }}</div>
+                    </div>
                 </div>
-            </div>
 
-            <div v-if="fullView" class="flex flex-col gap-2">
-                <div v-for="v in sunaHai" class="italic min-w-80">
-                    <div>{{ v[0] }}</div>
-                    <div>{{ v[1] }}</div>
+                <div v-if="!fullView" class="flex flex-col gap-2 italic text-md min-w-80">
+                    <div>{{ sunaHai[index][0] }}</div>
+                    <div>{{ sunaHai[index][1] }}</div>
                 </div>
+
+                <div class="my-4 border-b border-orange-400"></div>
+
+                <div class="text-center">Z</div>
             </div>
+        </div>
 
-            <div v-if="!fullView" class="flex flex-col gap-2 italic text-md min-w-80">
-                <div>{{ sunaHai[index][0] }}</div>
-                <div>{{ sunaHai[index][1] }}</div>
-            </div>
-
-            <div class="my-4 border-b border-orange-400"></div>
-
-            <div class="text-center">Z</div>
+        <div class="flex items-center justify-end gap-2 p-2 text-sm">
+            <a href="https://github.com/AfaanBilal/suna-hai" target="_blank" rel="noopener" class="hover:text-blue-500">
+                GitHub
+            </a>
+            &middot;
+            <a href="https://afaan.dev" target="_blank" rel="noopener" class="hover:text-blue-500">
+                Copyright &copy; Afaan Bilal
+            </a>
         </div>
     </div>
 </template>
