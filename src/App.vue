@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /**
- * suna hai
+ * Suna Hai
  *
  * @link        https://suna-hai.afaan.dev
  *
