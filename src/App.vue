@@ -73,6 +73,8 @@ const fullView = ref(false);
                     <div>{{ sunaHai[index][1] }}</div>
                 </div>
 
+                <div class="mt-4 text-sm italic text-right">Ahmad Farāz</div>
+
                 <div class="my-4 border-b border-orange-400"></div>
 
                 <div class="text-center">Z</div>
